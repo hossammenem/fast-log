@@ -2,6 +2,11 @@
   "name": "fast-log-ts",
   "displayName": "fast-log-ts",
   "publisher": "HossamAMenem",
+  "icon": "imgs/logo.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hossammenem/fast-log"
+  },
   "description": "",
   "version": "0.0.1",
   "engines": {
