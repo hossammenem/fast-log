@@ -1,6 +1,6 @@
 import * as vscode from "vscode";
 import * as emmet from "./logFuntions/index";
-import isVariable from "./logFuntions/variables/isVariable";
+import isVariable from "./logFuntions/varFunctions/isVariable";
 
 export default function logEmmter() {
   const activeEditor = vscode.window.activeTextEditor;
@@ -13,21 +13,25 @@ export default function logEmmter() {
       currentLine.lineNumber,
       currentLine.text.length
     );
+
     const lineRange = new vscode.Range(lineStart, lineEnd);
 
     const textContent = currentLine.text.replace("//", "").trim();
 
+    const colonIdx = textContent.indexOf(":");
+    const n = textContent.length;
+    const option = textContent.slice(colonIdx + 1, n).trim();
+    const vars = textContent.slice(0, colonIdx > 0 ? colonIdx : n).split(",");
+
     if (isVariable(textContent)) {
-      emmet.varDef(activeEditor, textContent, lineRange);
-    } else if (textContent.includes("printArgs")) {
-      emmet.printArgs(
+      emmet.varDef(
         activeEditor,
         activeEditor.document,
-        currentPosition,
-        lineRange
+        textContent,
+        currentPosition
       );
-    } else if (textContent.match(/[a-zA-Z_0-9,]+/g)) {
-      emmet.emmetVars(activeEditor, textContent.split(","), lineRange);
+    } else if (textContent) {
+      emmet.emmetVars(activeEditor, vars, lineRange, option.toLowerCase());
     }
   }
 }
