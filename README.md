@@ -2,17 +2,18 @@
   <img src="https://github.com/hossammenem/fast-log/blob/master/assets/imgs/logo.png" width="128" alt="fast-log Logo">
 </p>
 
-<p align="center">
-  [![Visual Studio Code](https://img.shields.io/badge/--007ACC?logo=visual%20studio%20code&logoColor=ffffff)]()
-</p>
+<span align="center">
+
+[![Visual Studio Code](https://img.shields.io/badge/--007ACC?logo=visual%20studio%20code&logoColor=ffffff)](https://marketplace.visualstudio.com/items?itemName=HossamAMenem.fastlogging)
+</span>
 
 <h1 align="center">
-  fast log ⚡
+  fast-log ⚡
 </h1>
 
 <h2 id="about">About</h2>
 
-_"fast log"_ is a simple extension that makes it easier for developers to print out variables when debugging their code.
+_"fast-log"_ is a simple extension that makes it easier for developers to print out variables when debugging their code.
 
 Currently, the extension only supports `typescript`, but I'm planning to add more languages soon.
 
@@ -25,10 +26,10 @@ https://github.com/hossammenem/fast-log/assets/88946630/fc362e76-af1a-4b01-aace-
 From the CLI:
 
 ```bash
-code --install-extension HossamAMenem.fast-log
+code --install-extension HossamAMenem.fastlogging
 ```
 
-or from [VSCode marketplace]().
+or from [VSCode marketplace](https://marketplace.visualstudio.com/items?itemName=HossamAMenem.fast_log).
 
 <h2 id="contributing">Contributing</h2>
 

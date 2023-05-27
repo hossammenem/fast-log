@@ -1,5 +1,5 @@
 {
-  "name": "fast-log",
+  "name": "fastlogging",
   "displayName": "fast-log",
   "publisher": "HossamAMenem",
   "icon": "imgs/logo.png",
@@ -8,7 +8,7 @@
     "url": "https://github.com/hossammenem/fast-log"
   },
   "description": "",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.78.0"
   },
@@ -16,7 +16,8 @@
     "Other"
   ],
   "activationEvents": [
-    "onLanguage:typescript"
+    "onLanguage:typescript",
+    "onLanguage:javascript"
   ],
   "main": "./dist/extension.js",
   "contributes": {
