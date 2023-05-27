@@ -19,10 +19,11 @@ Currently, the extension only supports `typescript`, but I'm planning to add mor
 
 <h2 id="features-showcasing">What can it does?</h2>
 
-<video src="https://github.com/hossammenem/fast-log/assets/88946630/fc362e76-af1a-4b01-aace-decf4ae45b4e" />
+<video src="https://github.com/hossammenem/fast-log/assets/88946630/fc362e76-af1a-4b01-aace-decf4ae45b4e">
+</video>
 
 <h2 id="installation">Installation</h2>
- 
+
 From the CLI:
 
 ```bash
