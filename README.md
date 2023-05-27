@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="https://github.com/hossammenem/fast-log/blob/master/assets/imgs/logo.png" width="128" alt="fast-log Logo">
+  <img src="https://github.com/hossammenem/fast-log/blob/master/imgs/logo.png" width="128" alt="fast-log Logo">
 </p>
 
-<span align="center">
+<div align="center">
 
 [![Visual Studio Code](https://img.shields.io/badge/--007ACC?logo=visual%20studio%20code&logoColor=ffffff)](https://marketplace.visualstudio.com/items?itemName=HossamAMenem.fastlogging)
-</span>
+</div>
 
 <h1 align="center">
   fast-log ⚡
@@ -19,7 +19,7 @@ Currently, the extension only supports `typescript`, but I'm planning to add mor
 
 <h2 id="features-showcasing">What can it does?</h2>
 
-https://github.com/hossammenem/fast-log/assets/88946630/fc362e76-af1a-4b01-aace-decf4ae45b4e
+<video src="https://github.com/hossammenem/fast-log/assets/88946630/fc362e76-af1a-4b01-aace-decf4ae45b4e" />
 
 <h2 id="installation">Installation</h2>
  
@@ -29,7 +29,7 @@ From the CLI:
 code --install-extension HossamAMenem.fastlogging
 ```
 
-or from [VSCode marketplace](https://marketplace.visualstudio.com/items?itemName=HossamAMenem.fast_log).
+or from [VSCode marketplace](https://marketplace.visualstudio.com/items?itemName=HossamAMenem.fastlogging).
 
 <h2 id="contributing">Contributing</h2>
 
