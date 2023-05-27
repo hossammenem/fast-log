@@ -10,13 +10,6 @@
   fast log ⚡
 </h1>
 
-## Table of contents
-
-- <a href="#about">About</a>
-- <a href="#features-showcasing">What can it does?</a>
-- <a href="#installation">Installation</a>
-- <a href="#contributing">Contributing</a>
-
 <h2 id="about">About</h2>
 
 _"fast log"_ is a simple extension that makes it easier for developers to print out variables when debugging their code.
