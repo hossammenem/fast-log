@@ -25,7 +25,7 @@ Currently, the extension only supports `typescript`, but I'm planning to add mor
 
 <h2 id="features-showcasing">What can it does?</h2>
 
-[FeaturesShowcasing](https://raw.githubusercontent.com/hossammenem/fast-log/blob/master/assets/features%20showcasing.mp4)
+[FeaturesShowcasing](https://github.com/hossammenem/fast-log/blob/master/assets/features%20showcasing.mp4)
 
 <h2 id="installation">Installation</h2>
  
