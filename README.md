@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/hossammenem/fast-log/blob/master/assets/imgs/logo.png" width="128" alt="fast-log Logo">
+  <img src="https://github.com/hossammenem/fast-log/blob/master/assets/imgs/logo.png" width="128" alt="fast-log Logo">
 </p>
 
 <p align="center">
@@ -7,19 +7,19 @@
 </p>
 
 <h1 align="center">
-  fast-log ⚡
+  fast log ⚡
 </h1>
 
 ## Table of contents
 
 - <a href="#about">About</a>
 - <a href="#features-showcasing">What can it does?</a>
-- <a href="installation">Installation</a>
+- <a href="#installation">Installation</a>
 - <a href="#contributing">Contributing</a>
 
 <h2 id="about">About</h2>
 
-_fast-log_ is a simple extension that makes it easier for developers to print out variables when debugging their code.
+_"fast log"_ is a simple extension that makes it easier for developers to print out variables when debugging their code.
 
 Currently, the extension only supports `typescript`, but I'm planning to add more languages soon.
 
@@ -29,7 +29,7 @@ Currently, the extension only supports `typescript`, but I'm planning to add mor
 
 <h2 id="installation">Installation</h2>
  
-from the CLI:
+From the CLI:
 
 ```bash
 code --install-extension HossamAMenem.fast-log
@@ -39,4 +39,4 @@ or from [VSCode marketplace]().
 
 <h2 id="contributing">Contributing</h2>
 
-if you found any issues or have an idea about anything that can be improved, feel free to open a PR / issue.
+if you found any issues or have any ideas about anything that can be improved, feel free to open a PR / issue.
