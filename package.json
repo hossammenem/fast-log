@@ -2,7 +2,7 @@
   "name": "fastlogging",
   "displayName": "fast-log",
   "publisher": "HossamAMenem",
-  "icon": "imgs/logo.png",
+  "icon": "assets/imgs/logo.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/hossammenem/fast-log"

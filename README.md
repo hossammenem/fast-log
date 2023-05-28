@@ -1,6 +1,6 @@
 <div align="center">
 
-  ![Logo](assets/imgs/logo.png)
+  ![Logo for fast-log](https://raw.githubusercontent.com/hossammenem/fast-log/master/assets/imgs/logo.png)
 </div>
 
 <div align="center">
@@ -19,7 +19,6 @@ _"fast-log"_ is a simple extension that makes it easier for developers to print 
 Currently, the extension only supports `typescript`, but I'm planning to add more languages soon.
 
 <h2 id="features-showcasing">What can it does?</h2>
-
 
 ![features showcasing](assets/features_showcasimg.gif)
 
