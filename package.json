@@ -8,7 +8,7 @@
     "url": "https://github.com/hossammenem/fast-log"
   },
   "description": "",
-  "version": "0.0.4",
+  "version": "0.0.7",
   "engines": {
     "vscode": "^1.78.0"
   },
@@ -17,7 +17,9 @@
   ],
   "activationEvents": [
     "onLanguage:typescript",
-    "onLanguage:javascript"
+    "onLanguage:javascript",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescriptreact"
   ],
   "main": "./dist/extension.js",
   "contributes": {
