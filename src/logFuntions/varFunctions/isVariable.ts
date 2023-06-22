@@ -1,10 +1,48 @@
-export default function isVariable(varDef: string): boolean {
-  const pattern1: RegExp =
-    /^(export\s+)?(const\s+|let\s+|var\s+)([a-zA-Z_0-9]+)\s*(?:\:.*)?(?:\=.*)?\;?$/g;
-  const pattern2: RegExp = /^(let|var)\s+[a-zA-Z0-9_]+;?/g;
-  const partter3: RegExp = /^([a-zA-Z_0-9]+)\??\.[a-zA-Z_0-9]+\(.*\)\;?$/g;
+import * as vscode from "vscode";
 
-  return (
-    pattern1.test(varDef) || pattern2.test(varDef) || partter3.test(varDef)
-  );
+export default function isVariable(
+  document: vscode.TextDocument,
+  position: vscode.Position
+): Promise<boolean> {
+  return new Promise<boolean>((resolve) => {
+    vscode.commands
+      .executeCommand<vscode.DocumentSymbol[]>(
+        "vscode.executeDocumentSymbolProvider",
+        document.uri
+      )
+      .then((symbols) => {
+        let bool = false;
+        if (!symbols) {
+          vscode.window.showInformationMessage(
+            "No symbols found in the current document."
+          );
+        } else {
+          const found = getVar(symbols, position);
+          bool = found !== undefined;
+        }
+        resolve(bool);
+      });
+  });
+}
+
+function getVar(
+  symbols: vscode.DocumentSymbol[],
+  position: vscode.Position
+): vscode.Range | undefined {
+  let varRange: vscode.Range | undefined;
+  for (const symbol of symbols) {
+    if (
+      symbol.range.start.line == position.line &&
+      symbol.kind == 12 // kind 12 == variable
+    ) {
+      return symbol.range;
+    } else if (symbol.children) {
+      varRange = getVar(symbol.children, position);
+      if (varRange) {
+        break;
+      }
+    }
+  }
+
+  return varRange;
 }

@@ -4,13 +4,8 @@ import { emmetVars } from "../emmetVars";
 export function varDef(
   activeEditor: vscode.TextEditor | undefined,
   document: vscode.TextDocument,
-  varDef: string,
   position: vscode.Position
 ) {
-  const VarPattern: RegExp =
-    /^(?:export\s+)?(?:const\s+|let\s+|var\s+)?\s*([a-zA-Z0-9_]+)/g;
-  const matches = VarPattern.exec(varDef);
-
   vscode.commands
     .executeCommand<vscode.DocumentSymbol[]>(
       "vscode.executeDocumentSymbolProvider",
@@ -23,36 +18,26 @@ export function varDef(
         );
         return;
       }
-      if (matches) {
-        const varRange = getVarRange(symbols, matches[1], position);
-        emmetVars(activeEditor, matches[1], varRange);
-      }
+      const [varRange, name] = getVarRange(symbols, position);
+      emmetVars(activeEditor, name, varRange);
     });
 }
 
 function getVarRange(
   symbols: vscode.DocumentSymbol[],
-  matches: string,
   position: vscode.Position
-): vscode.Range | undefined {
+): any {
   let varRange: vscode.Range | undefined;
+  let name: string | undefined;
   for (const symbol of symbols) {
-    if (symbol.name == matches && symbol.range.start.line == position.line) {
-      return symbol.range;
+    if (symbol.range.start.line == position.line) {
+      return [symbol.range, symbol.name];
     } else if (symbol.children) {
-      varRange = getVarRange(symbol.children, matches, position);
+      [varRange, name] = getVarRange(symbol.children, position);
       if (varRange) {
         break;
       }
     }
   }
-
-  return varRange;
+  return [varRange, name] as const;
 }
-
-
-export const test = "this is a test var";
-const test2 = "another test var";
-//test
-//test:wItHtype
-//test:OnLyTYpe
